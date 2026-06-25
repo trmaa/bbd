@@ -3,6 +3,12 @@
 It's like the xxd tool, se `$ man xxd` for info, but simpler, and instead of hex, it shows binary.
 It's the tyniest size possible, no libs, just raw machine-code.
 
+## Use
+
+Install by: `$ make install`.
+
+Use by: `$ bbd < some file`.
+
 ## Example
 
 It just shows literally what is in each 64-bit row of memory in the disk.

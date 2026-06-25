@@ -1,3 +1,14 @@
+/*
+ * BBD - like xxd but in binary and much simpler
+ *
+ * Copyright (C) 2026
+ * License: GNU GPL
+ * Author: Pablo Trik Marin <mail@pablotrik.online>
+ */
+
+char *AUTHOR = "Pablo Trik Marin";
+char *VERSION = "1.0 release";
+
 printbin(char n)
 {
 	char buf = 0;
