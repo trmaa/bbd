@@ -7,17 +7,19 @@
  */
 
 char *AUTHOR = "Pablo Trik Marin";
-char *VERSION = "1.0 release";
+char *VERSION = "2.0 release";
 
-printbin(char n)
+printbin(unsigned char n)
 {
-	char buf = 0;
-	int i;
-	for (i = 0; i < 4; i++) {
-		buf = '0' + (n & 1); /* or n % 2 */
-		syscall(1, 1, &buf, 1);
-		n = n >> 1;
+	char buf[8];
+	int i = 8;
+
+	while (i != 0) {
+		buf[--i] = (n & 1) + '0';
+		n >>= 1;
 	}
+
+	syscall(1, 1, &buf[i], 8);
 }
 
 _start()
