@@ -1,9 +1,9 @@
-.PHONY: install all
-
 all: bbd
 
-bbd: main.c
-	cc -o $@ main.c sys.s -std=c89 -nostartfiles -fno-stack-protector
+bbd: bbd.c
+	cc -Wno-implicit-function-declaration -Wno-implicit-int -w -o bbd bbd.c
+
+.PHONY: all install
 
 install: bbd
-	cp bbd /usr/bin/
+	cp bbd /bin
