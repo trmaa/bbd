@@ -1,7 +1,9 @@
 char file[1024];
+
+/*
 char byte[8];
 
-void
+static void
 pbin(char n)
 {
 	for (int i = 0; i < 8; i++)
@@ -9,8 +11,9 @@ pbin(char n)
 
 	write(1, byte, 8);
 }
+*/
 
-main()
+_start(void)
 {
 	int len = read(0, file, 1024);
 
@@ -22,4 +25,6 @@ main()
 	}
 
 	write(1, "\n", 1);
+
+	exit(0);
 }
