@@ -1,4 +1,7 @@
-ccf = -no-pie -Wno-implicit-function-declaration -Wno-implicit-int -w -nostdlib -m32
+ccf := -no-pie -m32
+ccf += -nostdlib
+ccf += -Wno-implicit-function-declaration -Wno-implicit-int -w 
+
 all: bbd
 
 bbd: $(wildcard *.c) $(wildcard *.s)

@@ -6,7 +6,7 @@ byte:
 	.globl	pbin
 pbin:
 	xor	%esi, %esi
-.for0:
+.L0:
 	lea	byte, %eax
 	add	%esi, %eax
 
@@ -25,7 +25,7 @@ pbin:
 
 	inc	%esi
 	cmp	$8, %esi
-	jl	.for0
+	jl	.L0
 
 	push	%ebx
 	mov	$4, %eax
